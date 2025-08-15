@@ -58,7 +58,7 @@ header::after {
   z-index: -100;
 }
 
-.header-text-content {
+.header-content {
   margin-top: 75px;
   padding: 32px 24px;
   background-color: white;
@@ -79,7 +79,6 @@ header::after {
   float: left;
   margin-top: -50px;
   margin-left: -30px;
-  max-width: 460px;
   aspect-ratio: 1/1;
 }
 .name {
@@ -93,12 +92,12 @@ header::after {
   height: 100%;
   object-fit: cover;
 }
-.header-text-content > h1 {
+.header-content > h1 {
   font-size: 48px;
   letter-spacing: -1px;
 }
 
-.header-text-content > p {
+.header-content > p {
   color: var(--text-color-dark);
   font-size: 20px;
   margin-top: 20px;
@@ -258,11 +257,38 @@ footer {
     padding: 20px 50px;
     margin-top: 50px;
   }
-  .header-image {
-    max-width: 375px;
-  }
+  
   .footer-img-container > picture > img {
     max-width: 300px;
+  }
+  .name {
+    font-size:30px;
+  }
+  
+  
+  .header-content {
+    padding: 15px;
+    margin-top: 20px;
+    
+  }
+  .header-content > p {
+    font-size:18px;
+  }
+  .header-content > h1 {
+    font-size:42px;
+  }
+  
+   main > h2 {
+    font-size:24px;
+  }
+  .project >  div:first-child {
+    font-size:32px;
+  }
+  .project > div:last-child {
+   font-size:18px;
+  }
+  .contact {
+    font-size:19px;
   }
 }
 
@@ -281,8 +307,36 @@ footer {
   .header-img-container {
     margin: 0px 10px 10px 0px;
   }
-  .header-text-content {
+
+  .header-content {
     padding: 10px;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .header-content > p {
+    font-size:15px;
+  }
+  .header-content > h1 {
+    font-size:30px;
+  }
+
+  .name {
+    font-size:20px;
+  }
+
+   main > h2 {
+    font-size:20px;
+  }
+  .project >  div:first-child {
+    font-size:30px;
+  }
+  .project > div:last-child {
+   font-size:18px;
+  }
+  .contact {
+    font-size:18px;
   }
 }

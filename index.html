@@ -10,16 +10,17 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    
+
     <title>Homepage</title>
   </head>
   <body>
     <header>
-      <div class="header-text-content">
+      <div class="header-content">
         <div class="header-img-container">
           <img
             class="header-image"
-            src="https://images.pexels.com/photos/2220336/pexels-photo-2220336.jpeg?cs=srgb&dl=pexels-alexasfotos-2220336.jpg&fm=jpg"
+            srcset="assests/images/header-lion.jpg 3416w , assests/images/header-lion-med-size.jpg 2100w , assests/images/header-lion-small-size.jpg 1000w"
+            sizes="(width > 1100px) 460px , (width > 650px) 375px , 250px "
             alt="Front view lion face"
           />
           <span class="name">Mohammed Milly</span>
@@ -76,7 +77,11 @@
           </div>
         </div>
         <div class="project project2">
-          <div class="screenshot-project2">Screenshot of project</div>
+          <div class="screenshot-project2">
+
+            
+            Screenshot of project
+          </div>
           <div>
             <h3>
               Project name
@@ -258,9 +263,12 @@
         </div>
         <div class="footer-img-container">
           <picture>
-            <source srcset="assests/images/lion-cropped.jpg" media="(max-width : 1100px)"/>
-            <img src="assests/images/lion.jpg" alt="two lions in a jungle">
-          </picture> 
+            <source
+              srcset="assests/images/lion-cropped.jpg 2x , assests/images/lion-cropped-med-res.jps 1x"
+              media="(max-width : 1100px)"
+            />
+            <img srcset="assests/images/lion.jpg 2x , assests/images/lion-med-res.jpg 1x" alt="two lions in a jungle" />
+          </picture>
         </div>
       </div>
     </footer>
