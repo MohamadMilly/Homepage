@@ -10,12 +10,12 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-
+    
     <title>Homepage</title>
   </head>
   <body>
     <header>
-      <div>
+      <div class="header-text-content">
         <div class="header-img-container">
           <img
             class="header-image"
@@ -24,34 +24,32 @@
           />
           <span class="name">Mohammed Milly</span>
         </div>
-        <div class="header-text-content">
-          <h1>About me</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt
-            pariatur repudiandae quod minima consectetur, eligendi alias
-            distinctio voluptates quo impedit maiores quia sequi qui a adipisci
-            explicabo quis unde earum temporibus officiis, perspiciatis
-            dignissimos. Voluptatum enim quisquam delectus culpa excepturi vitae
-            itaque dolorum a nesciunt nobis nihil, eligendi repellat!
-          </p>
+        <h1>About me</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt
+          pariatur repudiandae quod minima consectetur, eligendi alias
+          distinctio voluptates quo impedit maiores quia sequi qui a adipisci
+          explicabo quis unde earum temporibus officiis, perspiciatis
+          dignissimos. Voluptatum enim quisquam delectus culpa excepturi vitae
+          itaque dolorum a nesciunt nobis nihil, eligendi repellat!
+        </p>
 
-          <div class="header-links-container">
-            <a>
-              <i class="devicon-github-original"></i>
-            </a>
-            <a>
-              <i class="devicon-linkedin-plain"></i>
-            </a>
-            <a>
-              <i class="devicon-twitter-original colored"></i>
-            </a>
-          </div>
+        <div class="header-links-container">
+          <a>
+            <i class="devicon-github-original"></i>
+          </a>
+          <a>
+            <i class="devicon-linkedin-plain"></i>
+          </a>
+          <a>
+            <i class="devicon-twitter-original colored"></i>
+          </a>
         </div>
       </div>
     </header>
     <main>
       <h2>My work</h2>
-      <div class="work-grid">
+      <section class="work-grid">
         <div class="project project1">
           <div class="screenshot-project1">Screenshot of project</div>
           <div>
@@ -202,7 +200,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer>
       <div class="footer-content">
@@ -259,48 +257,13 @@
           </div>
         </div>
         <div class="footer-img-container">
-          <img
-            src="https://www.hdwallpapers.in/download/lions_with_background_of_clouds_hd_lion-1920x1080.jpg"
-            alt="Two lions in jungle."
-          />
+          <picture>
+            <source srcset="assests/images/lion-cropped.jpg" media="(max-width : 1100px)"/>
+            <img src="assests/images/lion.jpg" alt="two lions in a jungle">
+          </picture> 
         </div>
       </div>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const imageHeaderContainer = document.querySelector(
-          ".header-img-container"
-        );
-        const aboutHeaderContainer = document.querySelector(
-          ".header-text-content"
-        );
-        const image = document.querySelector(".header-image");
-        const name = document.querySelector(".name");
-        function movePicture() {
-          if (window.innerWidth <= 1100) {
-            if (!aboutHeaderContainer.contains(image)) {
-              imageHeaderContainer.removeChild(image);
-              aboutHeaderContainer.insertBefore(
-                image,
-                aboutHeaderContainer.firstChild
-              );
-              aboutHeaderContainer.appendChild(name);
-              imageHeaderContainer.style.display = "none";
-            }
-          } else {
-            if (!imageHeaderContainer.contains(image)) {
-              imageHeaderContainer.appendChild(image);
-              imageHeaderContainer.style.display = "flex";
-              
-              aboutHeaderContainer.removeChild(name);
-              imageHeaderContainer.appendChild(name);
-            }
-          }
-        }
-        movePicture();
-
-        window.addEventListener("resize", movePicture);
-      });
-    </script>
+    <script></script>
   </body>
 </html>
